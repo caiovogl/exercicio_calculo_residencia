@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de residência</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form onsubmit="return escolherTipo()" id="formulario">
+        <h1>Cálculo de imóvel</h1>
+        <div id="entrar">
+            <input type="number" required class="textos" id="quartos" placeholder="Quantidade de quartos"><br>
+            <input type="number" required class="textos" id="metragem" placeholder="Metragem"><br>
+            <input type="number" required class="textos" id="preco" placeholder="Preço m²"><br>
+        </div>
+        <input type="radio" onclick="tirarAndar()" id="casa" name="residencia" checked>Casa <br>
+        <input type="radio" onclick="colocarAndar()" id="apartamento" name="residencia">Apartamento <br>
+        <input type="submit" class="botao" value="Calcular">
+        <p id="total"></p>
+    </form>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
