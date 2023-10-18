@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de residência</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <form onsubmit="return escolherTipo()" id="formulario">
-        <h1>Cálculo de imóvel</h1>
-        <div id="entrar">
-            <input type="number" required class="textos" id="quartos" placeholder="Quantidade de quartos"><br>
-            <input type="number" required class="textos" id="metragem" placeholder="Metragem"><br>
-            <input type="number" required class="textos" id="preco" placeholder="Preço m²"><br>
+<body class="d-flex justify-content-center align-items-center bg-info" style="height: 100vh;">
+    <form onsubmit="return escolherTipo()" id="formulario" class="form-control" style="width: 350px;">
+        <h1 class="mb-3">Cálculo de imóvel</h1>
+        <div id="entrar" class="d-flex flex-column">
+            <input type="number" required class="form-control" id="quartos" placeholder="Quantidade de quartos" min="0"><br>
+            <input type="number" required class="form-control" id="metragem" placeholder="Metragem" min="0"><br>
+            <input type="number" required class="form-control" id="preco" placeholder="Preço m²" min="0"><br>
         </div>
-        <input type="radio" onclick="tirarAndar()" id="casa" name="residencia" checked>Casa <br>
-        <input type="radio" onclick="colocarAndar()" id="apartamento" name="residencia">Apartamento <br>
-        <input type="submit" class="botao" value="Calcular">
-        <p id="total"></p>
+        <input type="radio" onclick="tirarAndar()" id="casa" name="residencia" checked class="mb-3"> Casa <br>
+        <input type="radio" onclick="colocarAndar()" id="apartamento" name="residencia" class="mb-3"> Apartamento <br>
+        <input class="btn btn-primary" type="submit" value="Calcular">
+        <p id="total" class="col-12 text-center h4" ></p>
     </form>
 
     
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>

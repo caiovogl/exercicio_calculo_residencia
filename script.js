@@ -2,6 +2,8 @@ function colocarAndar(){
     andar = document.querySelector("#quartos").cloneNode(true)
     andar.id = "andar"
     andar.placeholder = "Andar do apartamento"
+    andar.innerHTML = 0
+    andar.classList.add("mb-3")
     document.querySelector("#entrar").appendChild(andar)
 }
 
@@ -38,13 +40,13 @@ function escolherTipo(){
         andar = parseInt(document.getElementById("andar").value)
         switch(quartos){
             case 1:
-                total = preco * metragem * andar/2
+                total = preco * metragem * (1+andar/2)
                 break
             case 2:
-                total = preco * metragem * 1.2 * andar/2
+                total = preco * metragem * 1.2 * (1+andar/2)
                 break
             case 3:
-                total = preco * metragem * 1.5 * andar/2
+                total = preco * metragem * 1.5 * (1+andar/2)
                 break
             default:
                 alert("Não permitido")
